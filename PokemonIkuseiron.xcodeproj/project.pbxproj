@@ -16,6 +16,9 @@
 		48E889D727D5ED3E00375E0E /* PokemonIkuseironTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889D627D5ED3E00375E0E /* PokemonIkuseironTests.swift */; };
 		48E889E127D5ED3E00375E0E /* PokemonIkuseironUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889E027D5ED3E00375E0E /* PokemonIkuseironUITests.swift */; };
 		48E889E327D5ED3E00375E0E /* PokemonIkuseironUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889E227D5ED3E00375E0E /* PokemonIkuseironUITestsLaunchTests.swift */; };
+		48E889F127D83F5600375E0E /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 48E889F027D83F5600375E0E /* Eureka */; };
+		48E889F327D8437200375E0E /* IkuseironViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889F227D8437200375E0E /* IkuseironViewController.swift */; };
+		48E889F527D844B200375E0E /* CreateIkuseironViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		48E889DC27D5ED3E00375E0E /* PokemonIkuseironUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonIkuseironUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E889E027D5ED3E00375E0E /* PokemonIkuseironUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonIkuseironUITests.swift; sourceTree = "<group>"; };
 		48E889E227D5ED3E00375E0E /* PokemonIkuseironUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonIkuseironUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		48E889F227D8437200375E0E /* IkuseironViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkuseironViewController.swift; sourceTree = "<group>"; };
+		48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIkuseironViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E889F127D83F5600375E0E /* Eureka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,8 @@
 				48E889C827D5ED3E00375E0E /* Assets.xcassets */,
 				48E889CA27D5ED3E00375E0E /* LaunchScreen.storyboard */,
 				48E889CD27D5ED3E00375E0E /* Info.plist */,
+				48E889F227D8437200375E0E /* IkuseironViewController.swift */,
+				48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */,
 			);
 			path = PokemonIkuseiron;
 			sourceTree = "<group>";
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = PokemonIkuseiron;
+			packageProductDependencies = (
+				48E889F027D83F5600375E0E /* Eureka */,
+			);
 			productName = PokemonIkuseiron;
 			productReference = 48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 48E889B327D5ED3D00375E0E;
+			packageReferences = (
+				48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */,
+			);
 			productRefGroup = 48E889BD27D5ED3D00375E0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E889F527D844B200375E0E /* CreateIkuseironViewController.swift in Sources */,
+				48E889F327D8437200375E0E /* IkuseironViewController.swift in Sources */,
 				48E889C427D5ED3D00375E0E /* ViewController.swift in Sources */,
 				48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */,
 				48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */,
@@ -604,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48E889F027D83F5600375E0E /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */;
+			productName = Eureka;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48E889B427D5ED3D00375E0E /* Project object */;
 }
