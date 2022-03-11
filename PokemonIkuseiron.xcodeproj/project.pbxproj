@@ -19,6 +19,7 @@
 		48E889F127D83F5600375E0E /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 48E889F027D83F5600375E0E /* Eureka */; };
 		48E889F327D8437200375E0E /* IkuseironViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889F227D8437200375E0E /* IkuseironViewController.swift */; };
 		48E889F527D844B200375E0E /* CreateIkuseironViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */; };
+		48E889F827DBE34300375E0E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 48E889F727DBE34300375E0E /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E889F127D83F5600375E0E /* Eureka in Frameworks */,
+				48E889F827DBE34300375E0E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,7 @@
 			name = PokemonIkuseiron;
 			packageProductDependencies = (
 				48E889F027D83F5600375E0E /* Eureka */,
+				48E889F727DBE34300375E0E /* FirebaseFirestore */,
 			);
 			productName = PokemonIkuseiron;
 			productReference = 48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */;
@@ -228,6 +231,7 @@
 			mainGroup = 48E889B327D5ED3D00375E0E;
 			packageReferences = (
 				48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */,
+				48E889F627DBE34300375E0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 48E889BD27D5ED3D00375E0E /* Products */;
 			projectDirPath = "";
@@ -630,6 +634,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		48E889F627DBE34300375E0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,6 +649,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */;
 			productName = Eureka;
+		};
+		48E889F727DBE34300375E0E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48E889F627DBE34300375E0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
