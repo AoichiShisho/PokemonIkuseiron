@@ -7,10 +7,13 @@
 
 import UIKit
 import Eureka
+import FirebaseFirestore
 
 class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate {
     
     var userDefault = UserDefaults.standard
+    
+    let firestore = Firestore.firestore()
     
     @IBOutlet weak var createIkuseironNavigationBar: UINavigationBar!
     @IBOutlet weak var sendButton: UIButton!

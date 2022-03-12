@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E74BE627DD14AD00483A96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */; };
 		48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889BF27D5ED3D00375E0E /* AppDelegate.swift */; };
 		48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C127D5ED3D00375E0E /* SceneDelegate.swift */; };
 		48E889C427D5ED3D00375E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C327D5ED3D00375E0E /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonIkuseiron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E889BF27D5ED3D00375E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E889C127D5ED3D00375E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				48E889CD27D5ED3E00375E0E /* Info.plist */,
 				48E889F227D8437200375E0E /* IkuseironViewController.swift */,
 				48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */,
+				48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */,
 			);
 			path = PokemonIkuseiron;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				48E889CC27D5ED3E00375E0E /* LaunchScreen.storyboard in Resources */,
 				48E889C927D5ED3E00375E0E /* Assets.xcassets in Resources */,
 				48E889C727D5ED3D00375E0E /* Main.storyboard in Resources */,
+				48E74BE627DD14AD00483A96 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
