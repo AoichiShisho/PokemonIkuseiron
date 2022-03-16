@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		48E74BE627DD14AD00483A96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */; };
+		48E74BE927DF17EB00483A96 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 48E74BE827DF17EB00483A96 /* Realm */; };
+		48E74BEB27DF17EB00483A96 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48E74BEA27DF17EB00483A96 /* RealmSwift */; };
+		48E74BED27DFC16D00483A96 /* Ikuseiron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */; };
 		48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889BF27D5ED3D00375E0E /* AppDelegate.swift */; };
 		48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C127D5ED3D00375E0E /* SceneDelegate.swift */; };
 		48E889C427D5ED3D00375E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C327D5ED3D00375E0E /* ViewController.swift */; };
@@ -42,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ikuseiron.swift; sourceTree = "<group>"; };
 		48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonIkuseiron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E889BF27D5ED3D00375E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E889C127D5ED3D00375E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E74BEB27DF17EB00483A96 /* RealmSwift in Frameworks */,
+				48E74BE927DF17EB00483A96 /* Realm in Frameworks */,
 				48E889F127D83F5600375E0E /* Eureka in Frameworks */,
 				48E889F827DBE34300375E0E /* FirebaseFirestore in Frameworks */,
 			);
@@ -119,6 +125,7 @@
 				48E889F227D8437200375E0E /* IkuseironViewController.swift */,
 				48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */,
 				48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */,
+				48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */,
 			);
 			path = PokemonIkuseiron;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 			packageProductDependencies = (
 				48E889F027D83F5600375E0E /* Eureka */,
 				48E889F727DBE34300375E0E /* FirebaseFirestore */,
+				48E74BE827DF17EB00483A96 /* Realm */,
+				48E74BEA27DF17EB00483A96 /* RealmSwift */,
 			);
 			productName = PokemonIkuseiron;
 			productReference = 48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */;
@@ -235,6 +244,7 @@
 			packageReferences = (
 				48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */,
 				48E889F627DBE34300375E0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				48E74BE727DF17EB00483A96 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 48E889BD27D5ED3D00375E0E /* Products */;
 			projectDirPath = "";
@@ -283,6 +293,7 @@
 				48E889F527D844B200375E0E /* CreateIkuseironViewController.swift in Sources */,
 				48E889F327D8437200375E0E /* IkuseironViewController.swift in Sources */,
 				48E889C427D5ED3D00375E0E /* ViewController.swift in Sources */,
+				48E74BED27DFC16D00483A96 /* Ikuseiron.swift in Sources */,
 				48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */,
 				48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */,
 			);
@@ -630,6 +641,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		48E74BE727DF17EB00483A96 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xmartlabs/eureka";
@@ -649,6 +668,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		48E74BE827DF17EB00483A96 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48E74BE727DF17EB00483A96 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		48E74BEA27DF17EB00483A96 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48E74BE727DF17EB00483A96 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
 		48E889F027D83F5600375E0E /* Eureka */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48E889EF27D83F5600375E0E /* XCRemoteSwiftPackageReference "eureka" */;

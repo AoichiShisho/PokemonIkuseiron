@@ -104,29 +104,18 @@
                                     <navigationItem title="新規作成" id="eej-U7-wLl"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-8N-Lev">
-                                <rect key="frame" x="173.5" y="791" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="sendButton" destination="KnU-Vh-1Ia" eventType="touchUpInside" id="aO2-ag-7JS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eix-lo-Khn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mpu-pF-zqW" secondAttribute="trailing" id="3el-6Z-6gK"/>
                             <constraint firstItem="mpu-pF-zqW" firstAttribute="leading" secondItem="igd-bz-23L" secondAttribute="leading" id="6rG-sf-rdj"/>
-                            <constraint firstItem="eix-lo-Khn" firstAttribute="bottom" secondItem="hgt-8N-Lev" secondAttribute="bottom" constant="40" id="UNM-Kg-Fyv"/>
                             <constraint firstItem="mpu-pF-zqW" firstAttribute="top" secondItem="igd-bz-23L" secondAttribute="top" constant="44" id="dp0-zn-Xl3"/>
-                            <constraint firstItem="hgt-8N-Lev" firstAttribute="centerX" secondItem="igd-bz-23L" secondAttribute="centerX" id="m85-30-R5G"/>
                             <constraint firstItem="mpu-pF-zqW" firstAttribute="centerX" secondItem="igd-bz-23L" secondAttribute="centerX" id="pdh-v2-oYJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="createIkuseironNavigationBar" destination="mpu-pF-zqW" id="aVC-pK-ipu"/>
-                        <outlet property="sendButton" destination="hgt-8N-Lev" id="4Cv-r7-mPu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ml0-XY-tMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
