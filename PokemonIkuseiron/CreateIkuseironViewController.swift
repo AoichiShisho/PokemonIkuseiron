@@ -16,7 +16,7 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
     let firestore = Firestore.firestore()
     let realm = try! Realm()
     
-    var list: List<Ikuseiron>
+    var list: List<Ikuseiron>!
     
     @IBOutlet weak var createIkuseironNavigationBar: UINavigationBar!
 
@@ -28,9 +28,6 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
         
         // EurekaのフォームFuncを呼び出している
         createIkuseironForm()
-        
-        // ikuseironという定数に取得したデータを代入している
-        //let ikuseiron: Ikuseiron? = read()
     }
     
     // Ikuseironオブジェクトから最初(first)のデータを取り出している

@@ -43,11 +43,6 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = list[indexPath.row].title
         return cell
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //let ikuseironCollection = realm.objects(Ikuseiron.self)
-        //let ikuseiron = ikuseironCollection[indexPath.row]
-        //cell.textLabel?.text = ikuseiron.title
-        //return cell
     }
     
     // このメソッドは画面表示前のタイミングで呼ばれます。
