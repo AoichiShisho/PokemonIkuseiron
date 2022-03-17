@@ -16,6 +16,8 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
     let firestore = Firestore.firestore()
     let realm = try! Realm()
     
+    var list: List<Ikuseiron>
+    
     @IBOutlet weak var createIkuseironNavigationBar: UINavigationBar!
 
     override func viewDidLoad() {
@@ -28,7 +30,7 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
         createIkuseironForm()
         
         // ikuseironという定数に取得したデータを代入している
-        let ikuseiron: Ikuseiron? = read()
+        //let ikuseiron: Ikuseiron? = read()
     }
     
     // Ikuseironオブジェクトから最初(first)のデータを取り出している
@@ -140,32 +142,30 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 
                 // 投稿ボタンを押した時の処理
                 row.onCellSelection {[unowned self] ButtonCellOf, row in
-                    
-                    // 画面を元の場所に戻す
-                    self.dismiss(animated: true, completion: nil)
-                    
-                    // フォームに書かれたname(ポケモンの名前)を取得
+                    let ikuseiron: Ikuseiron? = read()
+                    // フォームに書かれたtitleを取得
                     let titleRow = form.rowBy(tag: "title") as! TextRow
                     let title: String = titleRow.value!
                     // データを取得、なければ新しく作成し保存
-                    let ikuseiron: Ikuseiron? = read()
-                    
-                    // メモの新規作成、更新の条件分岐
-                    if ikuseiron != nil {
-                        // 更新
-                        try! realm.write {
-                            ikuseiron!.title = title
-                        }
-                    } else {
+                    if ikuseiron == nil {
                         // 新規作成
                         let newIkuseiron = Ikuseiron()
                         newIkuseiron.title = title
-                        
                         // Realmに新しくデータベースを追加する
                         try! realm.write {
                             realm.add(newIkuseiron)
                         }
+                    } else {
+                        // 更新
+                        try! realm.write {
+                            ikuseiron!.title = title
+                        }
                     }
+                    
+                    
+                    
+                    // 画面を元の場所に戻す(which is not working)
+                    self.dismiss(animated: true, completion: nil)
                     
                     // 保存したアラートを表示
                     let alert: UIAlertController = UIAlertController(title: "成功", message: "保存しました", preferredStyle: .alert)

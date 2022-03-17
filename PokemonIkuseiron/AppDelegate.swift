@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Realm.Configuration.defaultConfiguration = config
         
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         FirebaseApp.configure()
         return true
         }

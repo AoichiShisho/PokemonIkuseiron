@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E4m-FF-KKR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="E4m-FF-KKR">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E4m-FF-KKR" id="x8s-6N-wRh">
@@ -76,6 +76,7 @@
                     <navigationItem key="navigationItem" id="tfm-rk-yCP"/>
                     <connections>
                         <outlet property="addButton" destination="Ekh-eH-ido" id="4DS-Lu-2gM"/>
+                        <outlet property="ikuseironTableView" destination="lyK-fQ-FDo" id="62o-Tk-J8Y"/>
                         <outlet property="ikuseironViewNavigationBar" destination="Xzv-Fn-DlM" id="aJ5-tA-0Ww"/>
                     </connections>
                 </viewController>

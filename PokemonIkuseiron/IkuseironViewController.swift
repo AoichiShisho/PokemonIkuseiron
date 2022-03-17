@@ -6,18 +6,56 @@
 //
 
 import UIKit
+import RealmSwift
 
-class IkuseironViewController: UIViewController, UINavigationBarDelegate {
+class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var ikuseironViewNavigationBar: UINavigationBar!
-
+    
+    @IBOutlet weak var ikuseironTableView: UITableView!
+    
+    let realm = try! Realm()
+    var list: List<Ikuseiron>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Realmのデータを取得
+        list = realm.objects(IkuseironList.self).first?.list
+        
         // NavigationBarの設定
         ikuseironViewNavigationBar.delegate = self
         
+        self.ikuseironTableView.delegate = self
+        self.ikuseironTableView.dataSource = self
+        
         addButton.layer.cornerRadius = 32
+    }
+    
+    // tableviewの数を返す
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return realm.objects(Ikuseiron.self).count
+    }
+    
+    // 表示するCellの内容を変える
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = list[indexPath.row].title
+        return cell
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //let ikuseironCollection = realm.objects(Ikuseiron.self)
+        //let ikuseiron = ikuseironCollection[indexPath.row]
+        //cell.textLabel?.text = ikuseiron.title
+        //return cell
+    }
+    
+    // このメソッドは画面表示前のタイミングで呼ばれます。
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            loadView()
+            viewDidLoad()// データの再読み込み
     }
     
     // これによってNavigationBarを上につなげてる

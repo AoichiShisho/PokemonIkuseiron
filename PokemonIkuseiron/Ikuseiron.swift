@@ -22,3 +22,7 @@ class Ikuseiron: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var kousatu: String = ""
 }
+
+class IkuseironList: Object {
+    let list = List<Ikuseiron>()
+}
