@@ -144,19 +144,20 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                     let titleRow = form.rowBy(tag: "title") as! TextRow
                     let title: String = titleRow.value!
                     // データを取得、なければ新しく作成し保存
-                    if ikuseiron == nil {
+                    //if ikuseiron == nil {
                         // 新規作成
                         let newIkuseiron = Ikuseiron()
+                        let ikuseironList = IkuseironList()
                         newIkuseiron.title = title
                         // Realmに新しくデータベースを追加する
                         try! realm.write {
                             realm.add(newIkuseiron)
-                        }
-                    } else {
+                       // }
+                    //} else {
                         // 更新
-                        try! realm.write {
-                            ikuseiron!.title = title
-                        }
+                      //  try! realm.write {
+                      //      ikuseiron!.title = title
+                      //  }
                     }
                     
                     

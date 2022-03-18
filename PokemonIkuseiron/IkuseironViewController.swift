@@ -35,7 +35,8 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
     
     // tableviewの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realm.objects(Ikuseiron.self).count
+        //return realm.objects(Ikuseiron.self).count
+        return list.count
     }
     
     // 表示するCellの内容を変える
