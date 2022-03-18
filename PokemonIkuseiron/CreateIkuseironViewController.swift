@@ -14,8 +14,8 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
     
     var userDefault = UserDefaults.standard
     let firestore = Firestore.firestore()
-    let realm = try! Realm()
     
+    let realm = try! Realm()
     var list: List<Ikuseiron>!
     
     @IBOutlet weak var createIkuseironNavigationBar: UINavigationBar!
@@ -28,6 +28,9 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
         
         // EurekaのフォームFuncを呼び出している
         createIkuseironForm()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        list = realm.objects(IkuseironList.self).first?.list
     }
     
     // Ikuseironオブジェクトから最初(first)のデータを取り出している
@@ -139,28 +142,32 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 
                 // 投稿ボタンを押した時の処理
                 row.onCellSelection {[unowned self] ButtonCellOf, row in
-                    let ikuseiron: Ikuseiron? = read()
-                    // フォームに書かれたtitleを取得
+                    let ikuseiron = Ikuseiron()
+                    
                     let titleRow = form.rowBy(tag: "title") as! TextRow
                     let title: String = titleRow.value!
+                    
+                    ikuseiron.title = title
+                    
                     // データを取得、なければ新しく作成し保存
-                    //if ikuseiron == nil {
-                        // 新規作成
-                        let newIkuseiron = Ikuseiron()
-                        let ikuseironList = IkuseironList()
-                        newIkuseiron.title = title
-                        // Realmに新しくデータベースを追加する
-                        try! realm.write {
-                            realm.add(newIkuseiron)
-                       // }
-                    //} else {
-                        // 更新
-                      //  try! realm.write {
-                      //      ikuseiron!.title = title
-                      //  }
+                    try! self.realm.write() {
+                        if self.list == nil {
+                            // 新規作成
+                            //let newIkuseiron = Ikuseiron()
+                            //newIkuseiron.title = title
+                            //realm.add(newIkuseiron)
+                            
+                            let ikuseironList = IkuseironList()
+                            ikuseironList.list.append(ikuseiron)
+                            self.realm.add(ikuseironList)
+                            self.list = self.realm.objects(IkuseironList.self).first?.list
+                        } else {
+                            self.list.append(ikuseiron)
+                            //try! realm.write {
+                            //    ikuseiron!.title = title
+                            //}
+                        }
                     }
-                    
-                    
                     
                     // 画面を元の場所に戻す(which is not working)
                     self.dismiss(animated: true, completion: nil)

@@ -22,21 +22,24 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         super.viewDidLoad()
 
         // Realmのデータを取得
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         list = realm.objects(IkuseironList.self).first?.list
         
         // NavigationBarの設定
         ikuseironViewNavigationBar.delegate = self
         
+        // TableViewの設定
         self.ikuseironTableView.delegate = self
         self.ikuseironTableView.dataSource = self
         
+        // ボタンを丸くしている
         addButton.layer.cornerRadius = 32
     }
     
     // tableviewの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return realm.objects(Ikuseiron.self).count
-        return list.count
+        return realm.objects(Ikuseiron.self).count
+        //return list.count
     }
     
     // 表示するCellの内容を変える
