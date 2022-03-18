@@ -82,6 +82,7 @@
                         <outlet property="addButton" destination="Ekh-eH-ido" id="4DS-Lu-2gM"/>
                         <outlet property="ikuseironTableView" destination="lyK-fQ-FDo" id="62o-Tk-J8Y"/>
                         <outlet property="ikuseironViewNavigationBar" destination="Xzv-Fn-DlM" id="aJ5-tA-0Ww"/>
+                        <segue destination="JWq-J0-bzX" kind="show" identifier="showDetailSegue" id="zU8-Qx-EZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsD-R4-a25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,6 +127,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ml0-XY-tMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2286.9565217391305" y="197.54464285714286"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="3IJ-cq-BA8">
+            <objects>
+                <viewController id="JWq-J0-bzX" customClass="DetailViewController" customModule="PokemonIkuseiron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s6a-TB-qAp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mks-cF-apz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Ek-tM-76K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iE5-93-SDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287" y="926"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WEK-cd-CUW">

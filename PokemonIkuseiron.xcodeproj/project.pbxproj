@@ -11,6 +11,7 @@
 		48E74BE927DF17EB00483A96 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 48E74BE827DF17EB00483A96 /* Realm */; };
 		48E74BEB27DF17EB00483A96 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48E74BEA27DF17EB00483A96 /* RealmSwift */; };
 		48E74BED27DFC16D00483A96 /* Ikuseiron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */; };
+		48E74BEF27E52FB100483A96 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E74BEE27E52FB100483A96 /* DetailViewController.swift */; };
 		48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889BF27D5ED3D00375E0E /* AppDelegate.swift */; };
 		48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C127D5ED3D00375E0E /* SceneDelegate.swift */; };
 		48E889C427D5ED3D00375E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E889C327D5ED3D00375E0E /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ikuseiron.swift; sourceTree = "<group>"; };
+		48E74BEE27E52FB100483A96 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		48E889BC27D5ED3D00375E0E /* PokemonIkuseiron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonIkuseiron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E889BF27D5ED3D00375E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E889C127D5ED3D00375E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				48E889F427D844B200375E0E /* CreateIkuseironViewController.swift */,
 				48E74BE527DD14AD00483A96 /* GoogleService-Info.plist */,
 				48E74BEC27DFC16D00483A96 /* Ikuseiron.swift */,
+				48E74BEE27E52FB100483A96 /* DetailViewController.swift */,
 			);
 			path = PokemonIkuseiron;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				48E74BED27DFC16D00483A96 /* Ikuseiron.swift in Sources */,
 				48E889C027D5ED3D00375E0E /* AppDelegate.swift in Sources */,
 				48E889C227D5ED3D00375E0E /* SceneDelegate.swift in Sources */,
+				48E74BEF27E52FB100483A96 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

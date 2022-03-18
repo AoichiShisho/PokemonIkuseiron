@@ -59,13 +59,19 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
             }
         }
 
-    // このメソッドは画面表示前のタイミングで呼ばれます。
+    // データを再読み込みする関数
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             
             loadView()
             viewDidLoad()// データの再読み込み
     }
+    
+    // 詳細へ飛ぶための関数
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "showDetailSegue", sender: nil)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     
     // これによってNavigationBarを上につなげてる
     func position(for bar: UIBarPositioning) -> UIBarPosition {
