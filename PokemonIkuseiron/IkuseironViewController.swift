@@ -49,6 +49,16 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                try! realm.write {
+                    let ikuseiron = list[indexPath.row]
+                    realm.delete(ikuseiron)
+                }
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+
     // このメソッドは画面表示前のタイミングで呼ばれます。
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)

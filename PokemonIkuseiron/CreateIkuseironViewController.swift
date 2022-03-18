@@ -152,10 +152,6 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                     // データを取得、なければ新しく作成し保存
                     try! self.realm.write() {
                         if self.list == nil {
-                            // 新規作成
-                            //let newIkuseiron = Ikuseiron()
-                            //newIkuseiron.title = title
-                            //realm.add(newIkuseiron)
                             
                             let ikuseironList = IkuseironList()
                             ikuseironList.list.append(ikuseiron)
@@ -163,9 +159,6 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                             self.list = self.realm.objects(IkuseironList.self).first?.list
                         } else {
                             self.list.append(ikuseiron)
-                            //try! realm.write {
-                            //    ikuseiron!.title = title
-                            //}
                         }
                     }
                     
