@@ -7,14 +7,21 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UINavigationBarDelegate {
 
+    @IBOutlet weak var detailViewNavigationBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // NavigationBarの設定
+        detailViewNavigationBar.delegate = self
     }
     
+    // NavigationBarを上につなげる
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
 
     /*
     // MARK: - Navigation

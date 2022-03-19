@@ -135,14 +135,50 @@
                     <view key="view" contentMode="scaleToFill" id="s6a-TB-qAp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-1K-CDO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="1" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="a3J-w2-wYH"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="8AS-vI-iVz">
+                                <rect key="frame" x="20" y="108" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ew3-K5-Ghd"/>
+                                    <constraint firstAttribute="height" constant="50" id="oBO-Y8-lQ4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kV-sg-yu5">
+                                <rect key="frame" x="90" y="121" width="73" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mks-cF-apz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0kV-sg-yu5" firstAttribute="leading" secondItem="8AS-vI-iVz" secondAttribute="trailing" constant="20" id="5Cv-D8-33u"/>
+                            <constraint firstAttribute="trailing" secondItem="NfW-1K-CDO" secondAttribute="trailing" id="AfQ-0g-enZ"/>
+                            <constraint firstItem="8AS-vI-iVz" firstAttribute="leading" secondItem="mks-cF-apz" secondAttribute="leading" constant="20" id="TY9-fq-3Q3"/>
+                            <constraint firstItem="0kV-sg-yu5" firstAttribute="top" secondItem="NfW-1K-CDO" secondAttribute="bottom" constant="33" id="d4X-Jy-lCC"/>
+                            <constraint firstItem="NfW-1K-CDO" firstAttribute="top" secondItem="s6a-TB-qAp" secondAttribute="top" constant="44" id="lau-3v-U5r"/>
+                            <constraint firstItem="NfW-1K-CDO" firstAttribute="centerX" secondItem="s6a-TB-qAp" secondAttribute="centerX" id="tmT-oD-U7s"/>
+                            <constraint firstItem="NfW-1K-CDO" firstAttribute="leading" secondItem="s6a-TB-qAp" secondAttribute="leading" id="uvh-mI-yUA"/>
+                            <constraint firstItem="8AS-vI-iVz" firstAttribute="top" secondItem="NfW-1K-CDO" secondAttribute="bottom" constant="20" id="y9e-d9-ctR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Ek-tM-76K"/>
+                    <connections>
+                        <outlet property="detailViewNavigationBar" destination="NfW-1K-CDO" id="1R4-6g-w88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE5-93-SDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="926"/>
+            <point key="canvasLocation" x="2286.9565217391305" y="925.44642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WEK-cd-CUW">
@@ -164,6 +200,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="paper" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
