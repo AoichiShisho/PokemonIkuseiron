@@ -13,9 +13,9 @@ class Ikuseiron: Object {
     @objc dynamic var seikaku: String = ""
     @objc dynamic var tokusei: String = ""
     @objc dynamic var doryokuchi: String = ""
-    @objc dynamic var kotaichi: String = ""
     @objc dynamic var item: String = ""
     @objc dynamic var moves: String = ""
+    @objc dynamic var dynamax: String = ""
     
     @objc dynamic var rule: String = ""
     

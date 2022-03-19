@@ -46,7 +46,7 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
     func createIkuseironForm() {
         form
             +++ Section("基本情報")
-            <<< NameRow("name") { row in
+            <<< TextRow("name") { row in
                 row.title = "ポケモン名"
                 row.tag = "name"
                 row.add(rule: RuleRequired())
@@ -54,7 +54,7 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 self.userDefault.setValue(row.value, forKey: "Name")
             }
         
-            <<< NameRow("seikaku") { row in
+            <<< TextRow("seikaku") { row in
                 row.title = "性格"
                 row.tag = "seikaku"
                 row.add(rule: RuleRequired())
@@ -62,7 +62,7 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 self.userDefault.setValue(row.value, forKey: "Seikaku")
             }
         
-            <<< NameRow("tokusei") { row in
+            <<< TextRow("tokusei") { row in
                 row.title = "特性"
                 row.tag = "tokusei"
                 row.add(rule: RuleRequired())
@@ -70,24 +70,16 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 self.userDefault.setValue(row.value, forKey: "Tokusei")
             }
         
-            <<< NameRow("doryokuchi") { row in
+            <<< TextRow("doryokuchi") { row in
                 row.title = "努力値配分"
                 row.tag = "doryokuchi"
+                row.placeholder = "HP: 0 / 攻撃: 0 / 防御: 0 / 特攻: 0 / 特防: 0 / 素早さ: 0"
                 row.add(rule: RuleRequired())
             } .onChange { row in
                 self.userDefault.setValue(row.value, forKey: "Doryokuchi")
             }
         
-            <<< NameRow("kotaichi") { row in
-                row.title = "理想個体値"
-                row.tag = "kotaichi"
-                row.placeholder = "HP: 0 / 攻撃: 0 / 防御: 0 / 特攻: 0 / 特防: 0 / 素早さ: 0"
-                row.add(rule: RuleRequired())
-            } .onChange { row in
-                self.userDefault.setValue(row.value, forKey: "Kotaichi")
-            }
-        
-            <<< NameRow("item") { row in
+            <<< TextRow("item") { row in
                 row.title = "持ち物"
                 row.tag = "item"
                 row.add(rule: RuleRequired())
@@ -95,12 +87,21 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 self.userDefault.setValue(row.value, forKey: "Item")
             }
         
-            <<< NameRow("moves") { row in
+            <<< TextRow("moves") { row in
                 row.title = "覚えさせる技"
                 row.tag = "moves"
                 row.add(rule: RuleRequired())
             } .onChange { row in
                 self.userDefault.setValue(row.value, forKey: "Moves")
+            }
+        
+            <<< ActionSheetRow<String>("dynamax") { row in
+                row.title = "ダイナマックス"
+                row.tag = "dynamax"
+                row.selectorTitle = "ダイナマックスの有無"
+                row.options = ["する","しない"]
+            } .onChange { [unowned self] row in
+                self.userDefault.setValue(row.value, forKey: "Rule")
             }
         
         
@@ -144,10 +145,38 @@ class CreateIkuseironViewController: FormViewController, UINavigationBarDelegate
                 row.onCellSelection {[unowned self] ButtonCellOf, row in
                     let ikuseiron = Ikuseiron()
                     
+                    let nameRow = form.rowBy(tag: "name") as! TextRow
+                    let seikakuRow = form.rowBy(tag: "seikaku") as! TextRow
+                    let tokuseiRow = form.rowBy(tag: "tokusei") as! TextRow
+                    let doryokuchiRow = form.rowBy(tag: "doryokuchi") as! TextRow
+                    let itemRow = form.rowBy(tag: "item") as! TextRow
+                    let movesRow = form.rowBy(tag: "moves") as! TextRow
+                    let dynamaxRow = form.rowBy(tag: "dynamax") as! ActionSheetRow<String>
+                    let ruleRow = form.rowBy(tag: "rule") as! ActionSheetRow<String>
                     let titleRow = form.rowBy(tag: "title") as! TextRow
-                    let title: String = titleRow.value!
+                    let kousatuRow = form.rowBy(tag: "kousatu") as! TextAreaRow
                     
+                    let name: String = nameRow.value!
+                    let seikaku: String = seikakuRow.value!
+                    let tokusei: String = tokuseiRow.value!
+                    let doryokuchi: String = doryokuchiRow.value!
+                    let item: String = itemRow.value!
+                    let moves: String = movesRow.value!
+                    let dynamax: String = dynamaxRow.value!
+                    let rule: String = ruleRow.value!
+                    let title: String = titleRow.value!
+                    let kousatu: String = kousatuRow.value!
+                    
+                    ikuseiron.name = name
+                    ikuseiron.seikaku = seikaku
+                    ikuseiron.tokusei = tokusei
+                    ikuseiron.doryokuchi = doryokuchi
+                    ikuseiron.item = item
+                    ikuseiron.moves = moves
+                    ikuseiron.dynamax = dynamax
+                    ikuseiron.rule = rule
                     ikuseiron.title = title
+                    ikuseiron.kousatu = kousatu
                     
                     // データを取得、なければ新しく作成し保存
                     try! self.realm.write() {
