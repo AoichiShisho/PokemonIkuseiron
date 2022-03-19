@@ -32,7 +32,7 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         self.ikuseironTableView.delegate = self
         self.ikuseironTableView.dataSource = self
         
-        // ボタンを丸くしている
+        // 追加ボタンを丸くしている
         addButton.layer.cornerRadius = 32
     }
     
@@ -49,6 +49,7 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         return cell
     }
     
+    // RealmのCellが削除できるようにした
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
                 try! realm.write {
@@ -69,9 +70,9 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
     
     // 詳細へ飛ぶための関数
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "showDetailSegue", sender: nil)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        performSegue(withIdentifier: "showDetailSegue", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     // これによってNavigationBarを上につなげてる
     func position(for bar: UIBarPositioning) -> UIBarPosition {
