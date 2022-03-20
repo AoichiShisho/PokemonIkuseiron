@@ -159,7 +159,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="i8L-k8-IIj">
-                                <rect key="frame" x="34" y="213" width="402" height="75"/>
+                                <rect key="frame" x="20" y="213" width="374" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-Uk-29K">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="75"/>
@@ -186,7 +186,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KhP-LS-cix">
-                                        <rect key="frame" x="187" y="0.0" width="215" height="75"/>
+                                        <rect key="frame" x="187" y="0.0" width="187" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="特性" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-Jr-kcG">
                                                 <rect key="frame" x="8" y="8" width="31" height="18"/>
@@ -218,7 +218,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Piu-IE-kBy">
-                                <rect key="frame" x="29" y="393" width="347" height="100"/>
+                                <rect key="frame" x="20" y="393" width="374" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="覚えさせる技" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d60-Ek-GBI">
                                         <rect key="frame" x="8" y="5" width="92" height="18"/>
@@ -242,7 +242,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="i5J-1B-h2W">
-                                <rect key="frame" x="20" y="513" width="402" height="75"/>
+                                <rect key="frame" x="20" y="513" width="374" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-7I-4sN">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="75"/>
@@ -269,7 +269,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-Pa-iCo">
-                                        <rect key="frame" x="202" y="0.0" width="200" height="75"/>
+                                        <rect key="frame" x="202" y="0.0" width="172" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="対戦形式・ルール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lts-Qk-OEq">
                                                 <rect key="frame" x="5" y="5" width="123" height="18"/>
@@ -295,7 +295,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-nv-2Su">
-                                <rect key="frame" x="33" y="308" width="340" height="65"/>
+                                <rect key="frame" x="20" y="308" width="374" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="努力値配分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-VS-mUv">
                                         <rect key="frame" x="16" y="5" width="77" height="18"/>
@@ -319,7 +319,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-JS-R5e">
-                                <rect key="frame" x="30" y="608" width="347" height="200"/>
+                                <rect key="frame" x="20" y="608" width="374" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="考察" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wM-k1-q1J">
                                         <rect key="frame" x="8" y="8" width="31" height="18"/>
