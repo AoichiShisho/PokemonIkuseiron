@@ -24,6 +24,10 @@ class DetailViewController: UIViewController, UINavigationBarDelegate {
     @IBOutlet weak var seikakuView: UIView!
     @IBOutlet weak var tokuseiView: UIView!
     @IBOutlet weak var doryokuchiView: UIView!
+    @IBOutlet weak var movesView: UIView!
+    @IBOutlet weak var itemView: UIView!
+    @IBOutlet weak var ruleView: UIView!
+    @IBOutlet weak var kousatuView: UIView!
     
     var ikuseiron: Ikuseiron!
     
@@ -36,12 +40,25 @@ class DetailViewController: UIViewController, UINavigationBarDelegate {
         seikakuView.layer.borderWidth = 2.0
         tokuseiView.layer.borderWidth = 2.0
         doryokuchiView.layer.borderWidth = 2.0
+        movesView.layer.borderWidth = 2.0
+        itemView.layer.borderWidth = 2.0
+        ruleView.layer.borderWidth = 2.0
+        kousatuView.layer.borderWidth = 2.0
         seikakuView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
         tokuseiView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
         doryokuchiView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+        movesView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+        itemView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+        ruleView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+        kousatuView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+        
         seikakuView.layer.cornerRadius = 10
         tokuseiView.layer.cornerRadius = 10
         doryokuchiView.layer.cornerRadius = 10
+        movesView.layer.cornerRadius = 10
+        itemView.layer.cornerRadius = 10
+        ruleView.layer.cornerRadius = 10
+        kousatuView.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
