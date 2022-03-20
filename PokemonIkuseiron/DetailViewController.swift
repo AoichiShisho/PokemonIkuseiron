@@ -44,6 +44,7 @@ class DetailViewController: UIViewController, UINavigationBarDelegate {
         itemView.layer.borderWidth = 2.0
         ruleView.layer.borderWidth = 2.0
         kousatuView.layer.borderWidth = 2.0
+        
         seikakuView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
         tokuseiView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
         doryokuchiView.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
@@ -72,6 +73,10 @@ class DetailViewController: UIViewController, UINavigationBarDelegate {
         itemText.text = ikuseiron.item
         ruleText.text = ikuseiron.rule
         kousatuText.text = ikuseiron.kousatu
+        
+        // 考察のテキストを上詰めにしている
+        kousatuText.numberOfLines = 0
+        kousatuText.sizeToFit()
     }
     
     // NavigationBarを上につなげる
