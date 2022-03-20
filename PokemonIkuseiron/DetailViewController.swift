@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DetailViewController: UIViewController, UINavigationBarDelegate {
 
     @IBOutlet weak var detailViewNavigationBar: UINavigationBar!
+    @IBOutlet weak var titleText: UILabel!
+    
+    var ikuseiron: Ikuseiron!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // NavigationBarの設定
         detailViewNavigationBar.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        titleText.text = ikuseiron.title
     }
     
     // NavigationBarを上につなげる

@@ -48,7 +48,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="KnU-Vh-1Ia" kind="show" id="qzV-uH-4Mz"/>
+                                    <segue destination="KnU-Vh-1Ia" kind="show" id="J88-FB-UF0"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-Fn-DlM">
@@ -82,7 +82,7 @@
                         <outlet property="addButton" destination="Ekh-eH-ido" id="4DS-Lu-2gM"/>
                         <outlet property="ikuseironTableView" destination="lyK-fQ-FDo" id="62o-Tk-J8Y"/>
                         <outlet property="ikuseironViewNavigationBar" destination="Xzv-Fn-DlM" id="aJ5-tA-0Ww"/>
-                        <segue destination="JWq-J0-bzX" kind="show" identifier="showDetailSegue" id="zU8-Qx-EZN"/>
+                        <segue destination="JWq-J0-bzX" kind="show" identifier="showDetailSegue" id="bPr-x3-lon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsD-R4-a25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpu-pF-zqW">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpu-pF-zqW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" red="1" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -120,6 +120,7 @@
                             <constraint firstItem="mpu-pF-zqW" firstAttribute="centerX" secondItem="igd-bz-23L" secondAttribute="centerX" id="pdh-v2-oYJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8YR-L3-f9a"/>
                     <connections>
                         <outlet property="createIkuseironNavigationBar" destination="mpu-pF-zqW" id="aVC-pK-ipu"/>
                     </connections>
@@ -136,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-1K-CDO">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-1K-CDO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" red="1" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                 <items>
@@ -174,6 +175,7 @@
                     <navigationItem key="navigationItem" id="6Ek-tM-76K"/>
                     <connections>
                         <outlet property="detailViewNavigationBar" destination="NfW-1K-CDO" id="1R4-6g-w88"/>
+                        <outlet property="titleText" destination="0kV-sg-yu5" id="yyn-kE-iXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE5-93-SDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

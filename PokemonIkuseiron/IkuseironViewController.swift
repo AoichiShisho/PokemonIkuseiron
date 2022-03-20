@@ -17,6 +17,8 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
     
     let realm = try! Realm()
     var list: List<Ikuseiron>!
+    var ikuseironList: Results<Ikuseiron>!
+    var selectedIkuseiron: Ikuseiron!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
         // TableViewの設定
         self.ikuseironTableView.delegate = self
         self.ikuseironTableView.dataSource = self
+        
+        ikuseironList = realm.objects(Ikuseiron.self)
         
         // 追加ボタンを丸くしている
         addButton.layer.cornerRadius = 32
@@ -70,8 +74,16 @@ class IkuseironViewController: UIViewController, UINavigationBarDelegate, UITabl
     
     // 詳細へ飛ぶための関数
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIkuseiron = ikuseironList[indexPath.row]
         performSegue(withIdentifier: "showDetailSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailSegue" {
+            let nextVC = segue.destination as! DetailViewController
+            nextVC.ikuseiron = selectedIkuseiron
+        }
     }
     
     // これによってNavigationBarを上につなげてる
