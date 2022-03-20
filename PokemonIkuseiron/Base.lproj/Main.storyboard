@@ -152,18 +152,110 @@
                                     <constraint firstAttribute="height" constant="50" id="oBO-Y8-lQ4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kV-sg-yu5">
-                                <rect key="frame" x="90" y="121" width="73" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kV-sg-yu5">
+                                <rect key="frame" x="85" y="121" width="77.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MovesText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUQ-V6-AK2">
+                                <rect key="frame" x="141" y="507" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ItemText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHo-QM-2kE">
+                                <rect key="frame" x="55" y="588" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RuleText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juc-Bz-utK">
+                                <rect key="frame" x="256" y="588" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KousatuText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjD-kJ-c1y">
+                                <rect key="frame" x="55" y="653" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-Uk-29K">
+                                <rect key="frame" x="29" y="211" width="160" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性格 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l27-U0-pSW">
+                                        <rect key="frame" x="8" y="8" width="35" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SeikakuText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dob-1O-P1h">
+                                        <rect key="frame" x="35" y="27" width="90" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-g4-GM3">
+                                <rect key="frame" x="20" y="173" width="111.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KhP-LS-cix">
+                                <rect key="frame" x="216" y="211" width="160" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="特性" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-Jr-kcG">
+                                        <rect key="frame" x="8" y="8" width="31" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TokuseiText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECI-Bs-jRp">
+                                        <rect key="frame" x="35" y="27" width="90" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-nv-2Su">
+                                <rect key="frame" x="15" y="294" width="385" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DoryokuchiText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6D-gb-Svb">
+                                        <rect key="frame" x="133" y="22" width="119" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mks-cF-apz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0kV-sg-yu5" firstAttribute="leading" secondItem="8AS-vI-iVz" secondAttribute="trailing" constant="20" id="5Cv-D8-33u"/>
+                            <constraint firstItem="0kV-sg-yu5" firstAttribute="leading" secondItem="8AS-vI-iVz" secondAttribute="trailing" constant="15" id="5Cv-D8-33u"/>
                             <constraint firstAttribute="trailing" secondItem="NfW-1K-CDO" secondAttribute="trailing" id="AfQ-0g-enZ"/>
+                            <constraint firstItem="0kU-g4-GM3" firstAttribute="top" secondItem="8AS-vI-iVz" secondAttribute="bottom" constant="15" id="QrQ-k5-FZi"/>
+                            <constraint firstItem="0kU-g4-GM3" firstAttribute="leading" secondItem="mks-cF-apz" secondAttribute="leading" constant="20" id="Szg-Rv-GMC"/>
                             <constraint firstItem="8AS-vI-iVz" firstAttribute="leading" secondItem="mks-cF-apz" secondAttribute="leading" constant="20" id="TY9-fq-3Q3"/>
                             <constraint firstItem="0kV-sg-yu5" firstAttribute="top" secondItem="NfW-1K-CDO" secondAttribute="bottom" constant="33" id="d4X-Jy-lCC"/>
                             <constraint firstItem="NfW-1K-CDO" firstAttribute="top" secondItem="s6a-TB-qAp" secondAttribute="top" constant="44" id="lau-3v-U5r"/>
@@ -174,8 +266,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Ek-tM-76K"/>
                     <connections>
+                        <outlet property="TokuseiText" destination="ECI-Bs-jRp" id="sXa-lf-wRa"/>
                         <outlet property="detailViewNavigationBar" destination="NfW-1K-CDO" id="1R4-6g-w88"/>
+                        <outlet property="doryokuchiText" destination="a6D-gb-Svb" id="w5g-8n-Q1w"/>
+                        <outlet property="doryokuchiView" destination="cTU-nv-2Su" id="AlJ-Rw-8aG"/>
+                        <outlet property="itemText" destination="CHo-QM-2kE" id="gNj-3e-ZMc"/>
+                        <outlet property="kousatuText" destination="gjD-kJ-c1y" id="8f4-fg-BZL"/>
+                        <outlet property="movesText" destination="kUQ-V6-AK2" id="vEz-tE-99B"/>
+                        <outlet property="nameText" destination="0kU-g4-GM3" id="ptG-Xn-Na6"/>
+                        <outlet property="ruleText" destination="juc-Bz-utK" id="jgF-6j-hQT"/>
+                        <outlet property="seikakuText" destination="Dob-1O-P1h" id="kZ2-vS-Pxr"/>
+                        <outlet property="seikakuView" destination="0bJ-Uk-29K" id="mqp-b1-6eo"/>
                         <outlet property="titleText" destination="0kV-sg-yu5" id="yyn-kE-iXA"/>
+                        <outlet property="tokuseiView" destination="KhP-LS-cix" id="qjs-Qz-44o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE5-93-SDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
